@@ -1,0 +1,23 @@
+{
+  "name": "chasm",
+  "version": "1.0.0",
+  "description": "Chasm is a project that aims to implement an outdoorsy website that allows users to create camping reservations, secure hiking permits, finds trails and share experiences. This project is not meant for real world deployment, rather, it is to force me actually complete a full project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bryce-Davenport/Chasm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bryce-Davenport/Chasm/issues"
+  },
+  "homepage": "https://github.com/Bryce-Davenport/Chasm#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
