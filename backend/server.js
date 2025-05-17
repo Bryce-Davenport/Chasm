@@ -7,19 +7,14 @@ const PORT = 4012;
 // Middleware to parse JSON
 app.use(express.json());
 
-// Serve static frontend files
-app.use(express.static(path.join(__dirname, '../frontend/src')));
+// Serve static files from frontend/public
+app.use(express.static(path.join(__dirname, '../frontend/public')));
 
-// Example API route
-app.get('/api/hello', (req, res) => {
-  res.json({ message: 'Hello from the backend!' });
+// Default route (if needed)
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/public/index.html'));
 });
 
-// Catch-all: send index.html for any unknown routes (for SPA support)
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/src/index.html'));
-});
-
-app.listen(PORT, () => {
-  console.log(`CHASM server running at http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running at http://0.0.0.0:${PORT}`);
 });
